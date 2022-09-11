@@ -22,8 +22,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="0.0V"
-        android:inputType="number"
+        android:hint="0.00V"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bat1label" />
 
@@ -33,8 +33,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="0.0V"
-        android:inputType="number"
+        android:hint="0.00V"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bat3label" />
 
@@ -44,8 +44,8 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="0.0V"
-        android:inputType="number"
+        android:hint="0.00V"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bat4label" />
 
@@ -95,9 +95,19 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:ems="10"
-        android:hint="0.0V"
-        android:inputType="number"
+        android:hint="0.00V"
+        android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bat2label" />
+
+    <Button
+        android:id="@+id/chargeBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Charge"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bat4Voltage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
