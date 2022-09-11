@@ -21,11 +21,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         android:checkMark="@drawable/error"
         android:text="Battery #1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/seekBar" />
+        app:layout_constraintTop_toBottomOf="@+id/batCapValue" />
 
     <EditText
         android:id="@+id/bat4Voltage"
@@ -119,7 +119,7 @@
         app:layout_constraintTop_toBottomOf="@+id/bat2Voltage" />
 
     <SeekBar
-        android:id="@+id/seekBar"
+        android:id="@+id/cellCountBar"
         android:layout_width="173dp"
         android:layout_height="17dp"
         android:layout_marginStart="8dp"
@@ -139,52 +139,15 @@
         app:layout_constraintTop_toBottomOf="@+id/batterylist" />
 
     <EditText
-        android:id="@+id/bat1amp"
+        android:id="@+id/batCapValue"
         android:layout_width="109dp"
         android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="8dp"
         android:ems="10"
         android:hint="0mAh"
         android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/bat1Voltage"
-        app:layout_constraintTop_toBottomOf="@+id/bat1label" />
-
-    <EditText
-        android:id="@+id/bat2amp"
-        android:layout_width="109dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="0mAh"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/bat2Voltage"
-        app:layout_constraintTop_toBottomOf="@+id/bat2label" />
-
-    <EditText
-        android:id="@+id/bat3amp"
-        android:layout_width="109dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="0mAh"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/bat3Voltage"
-        app:layout_constraintTop_toBottomOf="@+id/bat3label" />
-
-    <EditText
-        android:id="@+id/bat4amp"
-        android:layout_width="109dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="4dp"
-        android:ems="10"
-        android:hint="0mAh"
-        android:inputType="number"
-        app:layout_constraintStart_toEndOf="@+id/bat4Voltage"
-        app:layout_constraintTop_toBottomOf="@+id/bat4label" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batCapacityLabel" />
 
     <TextView
         android:id="@+id/amprate"
@@ -202,7 +165,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:hint="0.0mAh"
+        android:hint="0.0A"
         app:layout_constraintStart_toEndOf="@+id/amprate"
         app:layout_constraintTop_toBottomOf="@+id/chargeBtn" />
 
@@ -210,10 +173,11 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="Estimated Time:"
-        app:layout_constraintTop_toBottomOf="@+id/amprate"
-        tools:layout_editor_absoluteX="8dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amprate" />
 
     <TextView
         android:id="@+id/estTimeValue"
@@ -224,5 +188,33 @@
         android:hint="0h : 0m : 0s"
         app:layout_constraintStart_toEndOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/amprate" />
+
+    <TextView
+        android:id="@+id/cellCountValue"
+        android:layout_width="61dp"
+        android:layout_height="20dp"
+        android:text="1"
+        app:layout_constraintStart_toEndOf="@+id/cellCountBar"
+        app:layout_constraintTop_toBottomOf="@+id/cellCountSlider" />
+
+    <TextView
+        android:id="@+id/batCapacityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Battery Capacity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cellCountBar" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="350dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/bat1label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batCapValue" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
