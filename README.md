@@ -2,7 +2,7 @@
 Android app for determining the correct settings for LIPO battery management.
 
 # Preview
-![](https://imgur.com/a/yC0lLky)
+![](https://i.imgur.com/ZFxxLCW.gif)
 
 # Install
 1. Switch to APK branch
